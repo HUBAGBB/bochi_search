@@ -36,15 +36,6 @@ export default function WebSearchResult({ searchResult, searchTerm }: Props) {
 								{item?.title}
 							</Link>
 							<p>{Parser(item.htmlSnippet)}</p>
-							<div className="float-right inline-block">
-							{
-                                            item.pagemap?.cse_thumbnail?.length > 0 && item.pagemap?.cse_thumbnail[0]?.src && (
-                                                <img className="object-cover h-20 w-20 ml-2 rounded-md" src={
-                                                    item.pagemap?.cse_thumbnail?.length > 0 && item.pagemap?.cse_thumbnail[0]?.src
-                                                }
-                                                    alt="" />
-                                            )}
-							</div>
 						</div>
 					)
 				})}
